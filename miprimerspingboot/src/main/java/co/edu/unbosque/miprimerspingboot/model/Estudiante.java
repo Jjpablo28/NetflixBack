@@ -9,76 +9,82 @@ import jakarta.persistence.Table;
 
 @Entity
 @Table(name = "estudiante")
+public class Estudiante { // clase entidad
 
+  private @Id @GeneratedValue(strategy = GenerationType.IDENTITY) Integer id;
 
-public class Estudiante {// clase entidad
-	
-	private @Id @GeneratedValue (strategy = GenerationType.IDENTITY) Integer id;
-		
-	private String nombre;
-	@Column(name = "documentoestudiante",unique = true)
-	private int documento;
-	private String programa;
-	private int semestre;
+  private String nombre;
 
-	public Estudiante() {
-		// TODO Auto-generated constructor stub
-	}
+  @Column(name = "documentoestudiante", unique = true)
+  private int documento;
 
-	public Estudiante(String nombre, int documento, String programa, int semestre) {
-		super();
-		this.nombre = nombre;
-		this.documento = documento;
-		this.programa = programa;
-		this.semestre = semestre;
-	}
+  private String programa;
+  private int semestre;
 
-	public Integer getId() {
-		return id;
-	}
+  public Estudiante() {
+    // TODO Auto-generated constructor stub
+  }
 
-	public void setId(Integer id) {
-		this.id = id;
-	}
+  public Estudiante(String nombre, int documento, String programa, int semestre) {
+    super();
+    this.nombre = nombre;
+    this.documento = documento;
+    this.programa = programa;
+    this.semestre = semestre;
+  }
 
-	public String getNombre() {
-		return nombre;
-	}
+  public Integer getId() {
+    return id;
+  }
 
-	public void setNombre(String nombre) {
-		this.nombre = nombre;
-	}
+  public void setId(Integer id) {
+    this.id = id;
+  }
 
-	public int getDocumento() {
-		return documento;
-	}
+  public String getNombre() {
+    return nombre;
+  }
 
-	public void setDocumento(int documento) {
-		this.documento = documento;
-	}
+  public void setNombre(String nombre) {
+    this.nombre = nombre;
+  }
 
-	public String getPrograma() {
-		return programa;
-	}
+  public int getDocumento() {
+    return documento;
+  }
 
-	public void setPrograma(String programa) {
-		this.programa = programa;
-	}
+  public void setDocumento(int documento) {
+    this.documento = documento;
+  }
 
-	public int getSemestre() {
-		return semestre;
-	}
+  public String getPrograma() {
+    return programa;
+  }
 
-	public void setSemestre(int semestre) {
-		this.semestre = semestre;
-	}
+  public void setPrograma(String programa) {
+    this.programa = programa;
+  }
 
-	@Override
-	public String toString() {
-		return "Estudiante [id=" + id + ", nombre=" + nombre + ", documento=" + documento + ", programa=" + programa
-				+ ", semestre=" + semestre + "]";
-	}
+  public int getSemestre() {
+    return semestre;
+  }
 
+  public void setSemestre(int semestre) {
+    this.semestre = semestre;
+  }
 
-
+  @Override
+  public String toString() {
+    return "Estudiante [id="
+        + id
+        + ", nombre="
+        + nombre
+        + ", documento="
+        + documento
+        + ", programa="
+        + programa
+        + ", semestre="
+        + semestre
+        + "]";
+  }
 }
