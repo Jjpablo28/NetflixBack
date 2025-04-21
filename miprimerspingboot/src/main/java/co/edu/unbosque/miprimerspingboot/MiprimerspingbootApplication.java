@@ -8,13 +8,12 @@ import org.springframework.context.annotation.Bean;
 @SpringBootApplication
 public class MiprimerspingbootApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(MiprimerspingbootApplication.class, args);
-	}
-	
-	@Bean
-	public ModelMapper getModelMapper() {
-		return new ModelMapper();
-	}
+  public static void main(String[] args) {
+    SpringApplication.run(MiprimerspingbootApplication.class, args);
+  }
 
+  @Bean
+  public ModelMapper getModelMapper() {
+    return new ModelMapper();
+  }
 }
