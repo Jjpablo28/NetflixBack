@@ -429,7 +429,7 @@ public class FirstAPIController {
 
     for (String groseria : diccionarioGroserias) {
       if (text.toLowerCase().contains(groseria.toLowerCase())) {
-        p= "si";
+        p = "si";
         break;
       }
     }
