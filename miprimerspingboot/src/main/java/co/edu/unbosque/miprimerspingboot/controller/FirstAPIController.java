@@ -91,7 +91,7 @@ public class FirstAPIController {
     Matcher matcher = pattern.matcher(email);
     String respuesta = "";
 
-    if (matcher.matches() == true) {
+    if (matcher.matches()) {
 
       respuesta = "si";
     } else {
@@ -119,7 +119,6 @@ public class FirstAPIController {
 
   @GetMapping("/verificarGroserias")
   public String verificarGroserias(@RequestParam String text) {
-
 
     String p = "no";
 
@@ -434,7 +433,7 @@ public class FirstAPIController {
     for (String groseria : diccionarioGroserias) {
       if (text.toLowerCase().contains(groseria.toLowerCase())) {
 
-        p= "si";
+        p = "si";
 
         break;
       }
