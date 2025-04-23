@@ -91,7 +91,7 @@ public class FirstAPIController {
     Matcher matcher = pattern.matcher(email);
     String respuesta = "";
 
-    if (matcher.matches() == true) {
+    if (matcher.matches()) {
 
       respuesta = "si";
     } else {
