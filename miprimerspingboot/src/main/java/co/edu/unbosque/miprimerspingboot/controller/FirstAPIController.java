@@ -120,7 +120,6 @@ public class FirstAPIController {
   @GetMapping("/verificarGroserias")
   public String verificarGroserias(@RequestParam String text) {
 
-
     String p = "no";
 
     List<String> diccionarioGroserias =
@@ -434,7 +433,7 @@ public class FirstAPIController {
     for (String groseria : diccionarioGroserias) {
       if (text.toLowerCase().contains(groseria.toLowerCase())) {
 
-        p= "si";
+        p = "si";
 
         break;
       }
